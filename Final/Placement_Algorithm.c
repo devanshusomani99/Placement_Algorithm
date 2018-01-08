@@ -34,9 +34,9 @@ int main() {
   int r1[M][N], r[M*N];
   char char1='0', char2='0';
 
-  for(int i=0;i<N;i++)
+  for(int i=0;i<M;i++)
   {
-    for(int j=0;j<M;j++)
+    for(int j=0;j<N;j++)
     {
       r1[i][j]=1000000000;
     }
@@ -69,16 +69,17 @@ int main() {
       }
     }
   }
-
-  for(int i=0;i<M;i++)
+  
+  for(int i=0;i<N;i++)
   {
-    for(int j=0;j<N;j++)
+    for(int j=0;j<M;j++)
     {
+	  if(r1[i][j]==1000000000){
+		r1[i][j]=2000000000;
+	  }
       r[i*N+j]=r1[i][j];
     }
   }
-
-
 
 
   /* an example cost matrix
