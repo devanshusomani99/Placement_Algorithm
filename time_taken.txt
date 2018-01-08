@@ -1,0 +1,7 @@
+The deepest loop inside loop is triple for loop.
+
+Thus the maximum running time it would take can be given by :
+
+t = O(N^3)
+
+where N is the number of total students
